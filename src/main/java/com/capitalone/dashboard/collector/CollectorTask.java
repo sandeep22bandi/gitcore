@@ -60,6 +60,7 @@ public abstract class CollectorTask<T extends Collector> implements Runnable {
 
         if (collector.isEnabled()) {
             // Do collection run
+			
             collect(collector);
 
             // Update lastUpdate timestamp in Collector
@@ -97,6 +98,7 @@ public abstract class CollectorTask<T extends Collector> implements Runnable {
 
 
     protected void log(String marker, long start) {
+	 LOGGER.info("-----------------------------------");
         log(marker, start, null);
     }
 
